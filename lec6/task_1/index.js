@@ -40,7 +40,7 @@ class Circle extends Figure {
   }
 
   get square() {
-    return 2 * Math.PI * this._coordinates[0].r;
+    return Math.PI * (this._coordinates[0].r ** 2);
   }
 }
 
