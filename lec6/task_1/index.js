@@ -1,6 +1,6 @@
 // Нужно создать класс, который в общем описывает
 // какую-то фигуру по координатам:
-// A1(0.6;2.1), A2(1.8;3.6), A3(2.2;2.3), A4(3.6;2.4) A5(3.1;0.5)
+// A1(0.6:2.1), A2(1.8:3.6), A3(2.2:2.3), A4(3.6:2.4) A5(3.1:0.5)
 // координаты передаются при создании экземпляра класса.
 // Так же фигура имеет метод "нарисовать фигуру",
 // для простоты мы просто в консоль выводим координаты.
@@ -32,6 +32,8 @@ const coordinates = [
 const fig = new Figure(coordinates);
 console.log('Координаты нашей фигуры', fig.coordinates);
 
+// Создание круга
+
 class Circle extends Figure {
   get coordinates() {
     return this._coordinates.map(coordinate => `${coordinate.x} : ${coordinate.y} : ${coordinate.y}`);
@@ -45,6 +47,8 @@ class Circle extends Figure {
 const circle = new Circle([{x: 1, y: 2, r: 5}]);
 console.log('Координаты круга', circle.coordinates);
 console.log('Площадь круга: ', Math.floor(circle.square));
+
+// Создание прямоугольника
 
 class Rectangle extends Figure {
   get coordinates() {
