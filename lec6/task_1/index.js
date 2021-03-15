@@ -30,7 +30,7 @@ const coordinates = [
 ]
 
 const fig = new Figure(coordinates);
-console.log('Координаты нашей фигуры', fig.coordinates);
+console.log('Координаты нашей фигуры:', fig.coordinates);
 
 // Создание круга
 
@@ -45,7 +45,7 @@ class Circle extends Figure {
 }
 
 const circle = new Circle([{x: 1, y: 2, r: 5}]);
-console.log('Координаты круга', circle.coordinates);
+console.log('Координаты круга:', circle.coordinates);
 console.log('Площадь круга: ', Math.floor(circle.square));
 
 // Создание прямоугольника
@@ -60,5 +60,5 @@ class Rectangle extends Figure {
 }
 
 const rectangle = new Rectangle([{x: 1, y: 1, w: 4, h: 2}]);
-console.log('Координаты прямоугольника', rectangle.coordinates);
+console.log('Координаты прямоугольника:', rectangle.coordinates);
 console.log('Площадь прямоугольника: ', rectangle.square);
