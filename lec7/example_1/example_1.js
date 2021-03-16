@@ -1,3 +1,6 @@
+//Создать поле ввода и кнопку, при нажатии которой снизу будет появляться тот текст,
+// который написан в том самом поле ввода
+
 const containerElement = document.querySelector('.container');
 const buttonElement = document.querySelector('.clickMe');
 const inputElement = document.querySelector('.input');

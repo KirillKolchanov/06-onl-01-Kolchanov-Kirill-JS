@@ -1,3 +1,8 @@
+// создать поле 10 на 10, заполненное случайными цифрами от 1 до 4
+// ниже располагается палитра из 4ех цветов, к каждому цвету своя цифра
+// при нажатии на нужный цвет реализовать возможность закрашивания секции в нашем поле
+// согласно той цифры что мы выбрали
+
 const gameElement = document.querySelector('.game');
 const selectedColorElement = document.querySelector('.color-selected');
 let selectedColor = '';
