@@ -8,7 +8,7 @@ closeBtnElements.forEach(closeBtnElement => closeBtnElement.addEventListener('cl
 
 // Закрытие модального окна по кнопке "ESC"
 document.addEventListener ('keydown', evt => {
-	if (evt.keyCode === 27) {
+	if (evt.code == 'Escape') {
   hideModalHandler();
   }
 })
