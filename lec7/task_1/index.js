@@ -18,24 +18,24 @@ closeBtnElements.forEach(closeBtnElement => closeBtnElement.addEventListener('cl
 
 // Закрытие модального окна по кнопке "ESC"
 document.addEventListener ('keydown', evt => {
-	if (evt.code == 'Escape') {
+  if (evt.code == 'Escape') {
   hideModalHandler();
   }
 })
 
 // Функция по открытию модального окна
 function showModalHandler() {
-	modalElement.classList.add('active');
+  modalElement.classList.add('active');
 }
 
 // Функция по закрытию модального окна
 function hideModalHandler() {
-	modalElement.classList.remove('active');
+  modalElement.classList.remove('active');
   formCleanup();
 }
 
 // Функция по зачистке инпутов в модальном окне
 function formCleanup() {
-	formInputElements.forEach(formInputElement => formInputElement.value = '');
+  formInputElements.forEach(formInputElement => formInputElement.value = '');
 }
 
