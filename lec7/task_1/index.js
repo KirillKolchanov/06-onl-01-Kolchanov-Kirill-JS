@@ -1,3 +1,13 @@
+// Вывод модального окна.
+// ● Скачать заготовку по ссылке;
+// ● Сверстано модальное окно, для отображения требуется убрать (display: none) у .modal;
+// ● Добавим функционал появления модального окна, по клику на кнопку “Add User”.
+// Закрытие модального окна.
+// ● Добавим функционал закрытия модального окна.
+// ○ по клику на знак “Х” в правом верхнем углу;
+// ○ по клику на кнопку “close”;
+// ○ При закрытии окна поля ввода должны очищаться.
+
 const addUserBtnElement = document.querySelector('.add-user');
 const modalElement = document.querySelector('.modal');
 const closeBtnElements = document.querySelectorAll('.close');
