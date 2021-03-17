@@ -1,3 +1,7 @@
+// ● Расширим функционал модального окна из занятия #7.
+// ● При добавлении пользователя через модальное окно, добавим полученный объект в массив пользователей.
+// ● Снова отрисуем массив, уже с новым пользователем.
+
 const addUserBtnElement = document.querySelector('.add-user');
 const modalElement = document.querySelector('.modal');
 const closeBtnElements = document.querySelectorAll('.close');
@@ -39,7 +43,7 @@ function addUserHandler(evt) {
 
   formInputElements.forEach(formInputElement => {
   	newUser[formInputElement.name] = formInputElement.value;
-  })
+})
 
   users.push(newUser);
 
@@ -59,14 +63,13 @@ function initTable(usersList) {
 	usersList.forEach(renderUser);
 }
 
-
 function renderUser(user) {
- 		const template = (`<tr><td>${user.firstName}</td><td>${user.lastName}</td><td>${user.age}</td>`);
+ 	const template = (`<tr><td>${user.firstName}</td><td>${user.lastName}</td><td>${user.age}</td>`);
 
   const templateElement = createElement(template);
 
   tableElement.append(templateElement);
-  }
+}
 
 function createElement(template) {
 	const element = document.createElement('table');
