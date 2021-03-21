@@ -1,0 +1,42 @@
+.game {
+  display: block;
+  width: 320px;
+  height: 320px;
+  border: 1px solid black;
+}
+
+.field {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid blue;
+  float: left;
+}
+
+.colors {
+  margin: 10px 0px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.color1 {
+  background-color: red;
+}
+
+.color2 {
+  background-color: green;
+}
+
+.color3 {
+  background-color: blue;
+}
+
+.color4 {
+  background-color: yellow;
+}
+
+.color-selected {
+  margin-left: 10px;
+}
+
+
