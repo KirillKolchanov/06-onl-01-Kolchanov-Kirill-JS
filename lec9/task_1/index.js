@@ -12,22 +12,22 @@ const tabElements = document.querySelectorAll ('.tab');
 const removeBtnElements = document.querySelectorAll('.btnRemove');
 
 tabElements.forEach(tabElement => {
-	tabElement.addEventListener ('click', tabClickHandler)
+  tabElement.addEventListener ('click', tabClickHandler)
 })
 
 removeBtnElements.forEach(removeBtnElement => {
-	removeBtnElement.addEventListener ('click', removeClickHandler)
+  removeBtnElement.addEventListener ('click', removeClickHandler)
 })
 
 function tabClickHandler (evt) {
-	const contentId = evt.target.dataset.id;
+  const contentId = evt.target.dataset.id;
   setActiveTab(contentId);
 }
 
 function removeClickHandler (evt) {
-	evt.stopPropagation();
+  evt.stopPropagation();
 
-	const tabElement = evt.target.parentElement;
+  const tabElement = evt.target.parentElement;
   const contentId = tabElement.dataset.id;
 
   const contentElement = document.querySelector (`.content-${contentId}`);
@@ -36,29 +36,29 @@ function removeClickHandler (evt) {
 
   const tabActiveElement = document.querySelector ('.tab.active');
   if (!tabActiveElement) {
-  	const tabElement = document.querySelector ('.tab');
+    const tabElement = document.querySelector ('.tab');
 
     const contentId = tabElement.dataset.id;
-  	setActiveTab(contentId);
+    setActiveTab(contentId);
   }
 
   const tabElements = document.querySelectorAll('.tab');
   if (tabElements.length === 1) {
-		document.querySelector('.tab .btnRemove').remove();
+    document.querySelector('.tab .btnRemove').remove();
   }
 }
 
 function setActiveTab (id) {
-	const tabActiveElement = document.querySelector ('.tab.active');
+  const tabActiveElement = document.querySelector ('.tab.active');
   const contentActiveElement = document.querySelector ('.content.active');
 
-	if (tabActiveElement) {
+  if (tabActiveElement) {
   	tabActiveElement.classList.remove('active');
     contentActiveElement.classList.remove('active');
   }
 
-	const tabElement = document.querySelector (`.tab[data-id = "${id}"]`);
-	const contentElement = document.querySelector (`.content-${id}`);
+  const tabElement = document.querySelector (`.tab[data-id = "${id}"]`);
+  const contentElement = document.querySelector (`.content-${id}`);
   contentElement.classList.add('active');
   tabElement.classList.add('active');
 }
