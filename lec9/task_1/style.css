@@ -1,0 +1,33 @@
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+.tab {
+  width: 100px;
+  border: 1px solid blue;
+  float: left;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+.cb {
+  clear: both;
+}
+
+.content {
+  border: 1px solid red;
+  float: left;
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.tab-list {
+  display: block;
+}
